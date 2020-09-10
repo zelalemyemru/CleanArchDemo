@@ -1,0 +1,14 @@
+﻿step for Migration
+1.Creating black solution.
+2. creat 5 different folder
+			a. cleanArch.Application
+			b. cleanArch.Domain
+			c. cleanArch.Infra.Data
+			d. cleanArch.Infra.loC
+			e. cleanArch.UI.MVC
+3. Add a new project at the cleanArch.Ul.MVC and name it cleanArch.MVC
+			- Changing the appSettings.json to point to the database
+			- Run the two command to add the model identity in to the database.
+					1. add-migration "InitialMigration" -context ApplicationDbContext
+					2.  update-database
+4.
