@@ -70,4 +70,10 @@
 
 9. Commit =>  "initial Commit of Infrastructure.Data.project and update MVC fron the UniveristyDBContext"
 
-10.
+10. add new Class Library name it "CleanArch.Application"
+11. delete Class1.cs in the class library.
+12. add folder name it "Interfaces"
+13. add folder name it "Services"
+14. add folder name it "ViewModels"
+15 Commit and name is "initial commit application Project"
+16. 
