@@ -11,4 +11,17 @@
 			- Run the two command to add the model identity in to the database.
 					1. add-migration "InitialMigration" -context ApplicationDbContext
 					2.  update-database
-4.
+4.Rename the folder 		
+			a. cleanArch.Application => Application
+			b. cleanArch.Domain=> Domain
+			c. cleanArch.Infra.Data=> Infra.Data
+			d. cleanArch.Infra.loC=> Infra.loC
+			e. cleanArch.UI.MVC=> Presentation
+5. Add a classproject in to Domain called CleanArch.Domain. And remove the Class1.cs
+			when you build and run in to an error(netsdk1004).
+			run the following in the package manager console.
+						dotnet restore
+
+6. 
+
+	
