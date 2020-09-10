@@ -21,7 +21,21 @@
 			when you build and run in to an error(netsdk1004).
 			run the following in the package manager console.
 						dotnet restore
+6 Create a folder under a classProject CleanArch.Domain and name it "Models"
+	* add a new clas inside the Models and name it Course.cs
+	* and add the following attribute
+	 public class Course
+	 {
+	    public int Id{get;set;}
+		public string Name{get;set;}
+		public string Description{get;set;}
+		public string ImageUrl{get;set;}
+	 }
+	 * build after you finish.
+	 * commit and name it "Add course domain model"
+	
 
-6. 
+
+
 
 	
