@@ -11,7 +11,7 @@
 2. Inside the Interface folder add "ICourseService" and add the following code.
 public interface ICourseService
 {
-	IEnumerable<CourseViewModel> GetCourses();
+	CourseViewModel GetCourses();
 }
 
 3. in Domain folder and ClearArch.Domain class library add a new folder and name it "Interface"
@@ -24,3 +24,42 @@ public interface ICourseService
 			IEnumerable<Course> GetCourses();
 		}
    * Commit and call it "Commit service and Repository Interface, CourseViewModel" 
+4. Implement interface
+	* inside the 'Service' folder in the ClearArch.Application add a new class and call it "CourseService" 
+	   and add the following code.
+	   public class CourseService : ICourseService
+	{
+		// call repositoty or dependecy injection 
+
+		private ICourseRepository _courseRepository;
+
+		//Constractor and inject repository
+		public CourseService(ICourseRepository courseRepository)
+		{
+			_courseRepository = courseRepository;
+		}
+		public CourseViewModel GetCourses()
+		{
+			return new CourseViewModel()
+			{
+				Courses= _courseRepository.GetCourses()
+			};
+		}
+	}
+5. Add 'Repository' folder inside the CleanArch.Infra.Data in Infra.Data folder
+	*  Add a new class and call it 'CourseRepository' and implement the following.
+	public class CourseRepository : ICourseRepository
+	{
+		private UniveristyDBContext _ctx; // injection
+										  // constructor.
+		public CourseRepository(UniveristyDBContext ctx)
+		{
+			_ctx = ctx;
+		}
+
+		public IEnumerable<Course> GetCourses()
+		{
+			return _ctx.Courses;
+		}
+	}
+6. 
