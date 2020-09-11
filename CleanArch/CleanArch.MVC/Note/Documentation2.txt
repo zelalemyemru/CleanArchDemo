@@ -1,0 +1,26 @@
+﻿1. viewmodel in CleanArch.Application
+	* viewModel mask our Domain Entity
+	* Add Class inside ViewModels and name it => "CourseViewModel" and add the following code.
+	public class CourseViewModel
+	{
+	// list all courses in course
+	  public IEnumerable<Course> Courses{get;set;}
+
+	}
+	* Rebuild
+2. Inside the Interface folder add "ICourseService" and add the following code.
+public interface ICourseService
+{
+	IEnumerable<CourseViewModel> GetCourses();
+}
+
+3. in Domain folder and ClearArch.Domain class library add a new folder and name it "Interface"
+	*
+	* add interface and call it 'ICourseRepository' then add the following code.
+
+		public interface ICourseRepository
+		{
+		  //
+			IEnumerable<Course> GetCourses();
+		}
+   * Commit and call it "Commit service and Repository Interface, CourseViewModel" 
