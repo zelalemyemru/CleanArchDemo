@@ -2,3 +2,26 @@
 	after that delete "class1.cs"
 2. add a nuget in the class libary
 	* Microsoft.extensions.dependencyinjection
+3. add a new class in CleanArch.Infra.loC class library and name it 'DependencyContainer'
+	and add the following code inside 
+	public class DependencyContainer
+	{
+		public static void RegisterService(IServiceCollection services)
+		{
+			// Application layer
+			services.AddScoped<ICourseService, CourseService>();
+			// Data layer (Infra.Data)
+			service.AddScoped<ICourseRepository, CourseRepository>();
+
+
+		}
+	}
+4. inside startup.cs add the following method inside
+  private static void RegisterService(IServiceCollection services)
+		{
+		  DependencyContainer.RegisterServices(services);
+
+		}
+
+		* inside ConfigureServices add the following method
+		RegisterService(services)
