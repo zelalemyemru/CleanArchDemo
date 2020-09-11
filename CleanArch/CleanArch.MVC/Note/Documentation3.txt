@@ -1,0 +1,4 @@
+﻿1. add a new classLibrary inside Infra.Ioc folder and call it "CleanArch.Infra.loC" 
+	after that delete "class1.cs"
+2. add a nuget in the class libary
+	* Microsoft.extensions.dependencyinjection
