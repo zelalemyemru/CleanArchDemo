@@ -46,7 +46,7 @@
 		public class UniveristyDBContext: DbContext
 		{
 		// creating constructor
-		   public UniveristyDBContext(DbContextOption options): base(options)
+		   public UniveristyDBContext(DbContextOptions options): base(options)
 		   {		       
 		   }
 

@@ -14,7 +14,8 @@ public interface ICourseService
 	CourseViewModel GetCourses();
 }
 
-3. in Domain folder and ClearArch.Domain class library add a new folder and name it "Interface"
+3. in Domain folder and ClearArch.Domain class library add a new folder and name
+		it "Interface"
 	*
 	* add interface and call it 'ICourseRepository' then add the following code.
 
